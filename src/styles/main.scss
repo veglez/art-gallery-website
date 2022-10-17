@@ -1,0 +1,18 @@
+@use "sass:math";
+
+// abstract
+@import "./abstract/variables";
+@import "./abstract/mixins";
+
+// base
+@import "./base/base";
+
+// components
+@import "./components/buttons";
+@import "./components/icons";
+@import "./components/heros";
+@import "./components/announcements";
+@import "./components/galleries";
+
+//layouts
+@import "./layout/footer";

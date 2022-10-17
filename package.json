@@ -1,0 +1,17 @@
+{
+  "name": "art-gallery-website",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^7.4.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "live-server": "^1.2.2",
+    "prettier": "^2.7.1",
+    "sass": "^1.55.0"
+  },
+  "scripts": {
+    "start" : "concurrently \"live-server src/\" \"sass -w src/styles/main.scss src/styles/index.css\""
+  }
+}

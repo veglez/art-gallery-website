@@ -1,0 +1,38 @@
+@mixin headers($font-size, $line-height, $font-weight: 900) {
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: $font-weight;
+  text-transform: uppercase;
+  font-family: $font-headers;
+}
+
+@mixin body($font-size, $line-height, $font-weight: 300) {
+  font-family: $font-body;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+}
+
+@mixin header-xl {
+  @include headers(9.6rem, 8.8rem);
+}
+
+@mixin header-l {
+  @include headers(7rem, 7rem);
+}
+
+@mixin header-m {
+  @include headers(6rem, 6rem);
+}
+
+@mixin header-s {
+  @include headers(3.6rem, 3.6rem);
+}
+
+@mixin body-m {
+  @include body(2.2rem, 3.2rem);
+}
+
+@mixin body-s {
+  @include body(1.8rem, 2.8rem);
+}

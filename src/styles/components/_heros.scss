@@ -1,0 +1,89 @@
+.hero {
+  display: grid;
+  gap: 32px;
+
+  &__CTA-section {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 16px;
+  }
+
+  &__title {
+    @include headers(6rem, 5.5rem);
+
+    & br {
+      display: none;
+    }
+  }
+
+  &__description {
+    @include body-s;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(10, 60px);
+
+    &__img {
+      grid-column: 1/8;
+      grid-row: 1/11;
+    }
+
+    &__CTA-section {
+      width: 339px;
+      grid-column: 7 / 13;
+      grid-row: 3 / 9;
+      position: relative;
+      left: -22px;
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .hero {
+    position: relative;
+    grid-template-columns: repeat(6, 1fr);
+    &__img {
+      position: relative;
+      left: 450px;
+      z-index: -1;
+
+      &::after {
+        content: "";
+        display: block;
+        width: 450px;
+        height: 799px;
+        background-color: $main;
+        position: absolute;
+        top: 0;
+        left: -450px;
+      }
+    }
+
+    &__CTA-section {
+      position: static;
+      grid-column: 5;
+      margin-inline-start: 238px;
+    }
+
+    &__title {
+      position: absolute;
+      max-width: 514px;
+      @include headers(9.6rem, 8.8rem);
+      left: math.div(165px, 1440px) * 100%;
+      mix-blend-mode: difference;
+      filter: invert(1);
+
+      & br {
+        display: initial;
+      }
+    }
+
+    &__description {
+      @include body-m;
+    }
+  }
+}

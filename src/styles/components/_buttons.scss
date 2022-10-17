@@ -1,0 +1,25 @@
+.button {
+  background-color: $main;
+  font-family: $font-headers;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  border: none;
+
+  &__text {
+    color: white;
+    @include headers(2rem, auto, 800);
+    letter-spacing: 0.364rem;
+    padding: 24px 35px 24px 32px;
+  }
+
+  &__img {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $secondary;
+    width: 56px;
+    padding: 24px;
+  }
+}

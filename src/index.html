@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&family=Outfit:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Art gallery website</title>
+  </head>
+  <body>
+    <div class="hero">
+      <picture class="hero__img">
+        <source
+          media="(min-width: 1440px)"
+          srcset="./statics/desktop/image-hero.jpg"
+        />
+        <source
+          media="(min-width: 768px)"
+          srcset="./statics/tablet/image-hero.jpg"
+        />
+        <img
+          src="./statics/mobile/image-hero.jpg"
+          alt="two person seeing a grandma painting"
+        />
+      </picture>
+      <div class="hero__CTA-section">
+        <h1 class="hero__title">
+          Modern <br />
+          Art Gallery
+        </h1>
+        <p class="hero__description">
+          The arts in the collection of the Modern Art Gallery all started from
+          a spark of inspiration. Will these pieces inspire you? Visit us and
+          find out.
+        </p>
+        <button class="button">
+          <span class="button__text">Our location</span>
+          <picture class="button__img">
+            <img src="./statics/icon-arrow-right.svg" alt="" />
+          </picture>
+        </button>
+      </div>
+    </div>
+
+    <main>
+      <div class="gallery">
+        -
+        <article class="announcement gallery__announcement--1">
+          <h2 class="announcement__title">Your day at the gallery</h2>
+          <p class="announcement__description">
+            Wander through our distinct collections and find new insights about
+            our artists. Dive into the details of their creative process.
+          </p>
+        </article>
+
+        <picture class="gallery__picture gallery__picture--picture1">
+          <source
+            media="(min-width: 1440px)"
+            srcset="./statics/desktop/image-grid-1.jpg"
+          />
+          <source
+            media="(min-width: 768px)"
+            srcset="./statics/tablet/image-grid-1.jpg"
+          />
+          <img src="./statics/mobile/image-grid-1.jpg" alt="art gallery room" />
+        </picture>
+
+        <picture class="gallery__picture gallery__picture--picture2">
+          <source
+            media="(min-width: 1440px)"
+            srcset="./statics/desktop/image-grid-2.jpg"
+          />
+          <source
+            media="(min-width: 768px)"
+            srcset="./statics/tablet/image-grid-2.jpg"
+          />
+          <img
+            src="./statics/mobile/image-grid-2.jpg"
+            alt="A single paint in a room"
+          />
+        </picture>
+
+        <picture class="gallery__picture gallery__picture--picture3">
+          <source
+            media="(min-width: 1440px)"
+            srcset="./statics/desktop/image-grid-3.jpg"
+          />
+          <source
+            media="(min-width: 768px)"
+            srcset="./statics/tablet/image-grid-3.jpg"
+          />
+          <img
+            src="./statics/mobile/image-grid-3.jpg"
+            alt="people seeing paints in the gallery room"
+          />
+        </picture>
+
+        <article
+          class="announcement announcement--dark-theme gallery__announcement--2"
+        >
+          <h2 class="announcement__title">Come &amp; be inspired</h2>
+          <p class="announcement__description">
+            We’re excited to welcome you to our gallery and see how our
+            collections influence you.
+          </p>
+        </article>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <!-- <h3 class="footer__title">Modern Art Gallery</h3> -->
+      <img class="footer__title" src="./statics/MODERNARTGALLERY.png" alt="" />
+      <p class="footer__description">
+        The Modern Art Gallery is free to all visitors and open seven days a
+        week from 8am to 9pm. Find us at 99 King Street, Newport, USA.
+      </p>
+
+      <div class="icons footer__icons">
+        <img
+          class="icons__img"
+          src="./statics/icon-facebook.svg"
+          alt="facebook icon"
+        />
+        <img
+          class="icons__img"
+          src="./statics/icon-instagram.svg"
+          alt="instagram icon"
+        />
+        <img
+          class="icons__img"
+          src="./statics/icon-twitter.svg"
+          alt="twitter icon"
+        />
+      </div>
+    </footer>
+  </body>
+</html>
