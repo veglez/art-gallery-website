@@ -36,3 +36,9 @@
 @mixin body-s {
   @include body(1.8rem, 2.8rem);
 }
+
+@mixin flex($direction, $gap) {
+  display: flex;
+  flex-direction: $direction;
+  gap: $gap;
+}

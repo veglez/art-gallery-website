@@ -16,6 +16,13 @@
     font-style: normal;
     @include body(1.6rem, 2.6rem);
   }
+  &--orange {
+    background-color: $secondary;
+    color: $main;
+    .footer__icons {
+      filter: invert(1);
+    }
+  }
 }
 
 @media screen and (min-width: 768px) {

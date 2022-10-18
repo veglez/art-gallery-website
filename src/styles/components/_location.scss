@@ -1,0 +1,40 @@
+.location {
+  background-color: $main;
+  color: $white;
+  padding: 48px 16px;
+  @include body(1.8rem, 2.8rem);
+  display: grid;
+
+  &__title {
+    color: $white;
+    @include headers(5rem, 4.5rem);
+  }
+
+  &__subtitle {
+    color: $secondary;
+    @include headers(3.2rem, 3.2rem);
+  }
+
+  &__right-column {
+    @include flex(column, 20px);
+    margin: 48px 0 0 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .location {
+    grid-template-columns: 1fr 1fr;
+
+    &__title {
+      margin-block-start: 48px;
+      width: 200px;
+      justify-self: center;
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .location {
+    padding: 104px 165px;
+  }
+}
