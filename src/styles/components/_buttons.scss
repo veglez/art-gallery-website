@@ -8,6 +8,15 @@
   width: fit-content;
   border: none;
 
+  &:hover {
+    background-color: $secondary;
+    cursor: pointer;
+
+    .button__img {
+      background-color: $main;
+    }
+  }
+
   &__text {
     color: white;
     @include headers(2rem, auto, 800);
