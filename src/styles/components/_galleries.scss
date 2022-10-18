@@ -33,19 +33,30 @@
 
 @media screen and (min-width: 768px) {
   .gallery {
-    gap: 6px;
-    grid-template-columns: repeat(7, math.div(689, 7) * 1px);
+    padding: 0px;
+    gap: 11px 12px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 400px 313px 396px;
     grid-template-areas:
-      "art1 art1 . pic1 pic1 pic1 pic1"
-      "pic2 pic2 pic2 pic2 pic3 pic3 pic3"
-      "pic2 pic2 pic2 pic2 art2 art2 art2";
+      "art1 art1 art1 art1 . pic1 pic1 pic1 pic1 pic1 pic1 pic1"
+      "pic2 pic2 pic2 pic2 pic2 pic2 pic2 pic3 pic3 pic3 pic3 pic3"
+      "pic2 pic2 pic2 pic2 pic2 pic2 pic2 art2 art2 art2 art2 art2";
     max-width: 689px;
-    margin: 0 auto;
+    margin: 120px auto;
 
     &__announcement {
       &--1 {
         min-width: 223px;
       }
     }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .gallery {
+    min-width: 1110px;
+    margin: 180px;
+    gap: 30px 28px;
+    grid-template-rows: 400px 313px 377px;
   }
 }

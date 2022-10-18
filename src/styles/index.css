@@ -11,6 +11,14 @@ html {
   padding: 0;
 }
 
+img {
+  width: 100%;
+}
+
+picture {
+  width: max-content;
+}
+
 .button {
   background-color: rgb(21, 21, 21);
   font-family: "Big Shoulders Display", sans-serif;
@@ -37,6 +45,7 @@ html {
   background-color: rgb(213, 150, 108);
   width: 56px;
   padding: 24px;
+  height: 100%;
 }
 
 .icons {
@@ -78,11 +87,11 @@ html {
 @media screen and (min-width: 768px) {
   .hero {
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(10, 60px);
   }
   .hero__img {
     grid-column: 1/8;
     grid-row: 1/11;
+    height: 700px;
   }
   .hero__CTA-section {
     width: 339px;
@@ -101,12 +110,13 @@ html {
     position: relative;
     left: 450px;
     z-index: -1;
+    height: 800px;
   }
   .hero__img::after {
     content: "";
     display: block;
     width: 450px;
-    height: 799px;
+    height: 800px;
     background-color: rgb(21, 21, 21);
     position: absolute;
     top: 0;
@@ -160,9 +170,24 @@ html {
 .announcement--dark-theme {
   color: rgb(255, 255, 255);
   background-color: rgb(21, 21, 21);
-  padding: 24px 48px;
+  padding: 85px 28px;
 }
 
+@media screen and (min-width: 1440px) {
+  .announcement__title {
+    font-size: 6rem;
+    line-height: 6rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-family: "Big Shoulders Display", sans-serif;
+  }
+  .announcement__description {
+    font-family: "Outfit", sans-serif;
+    font-size: 2.2rem;
+    font-weight: 300;
+    line-height: 3.2rem;
+  }
+}
 .gallery {
   display: grid;
   grid-template-columns: 1fr;
@@ -189,14 +214,24 @@ html {
 
 @media screen and (min-width: 768px) {
   .gallery {
-    gap: 6px;
-    grid-template-columns: repeat(7, 98.4285714286px);
-    grid-template-areas: "art1 art1 . pic1 pic1 pic1 pic1" "pic2 pic2 pic2 pic2 pic3 pic3 pic3" "pic2 pic2 pic2 pic2 art2 art2 art2";
+    padding: 0px;
+    gap: 11px 12px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 400px 313px 396px;
+    grid-template-areas: "art1 art1 art1 art1 . pic1 pic1 pic1 pic1 pic1 pic1 pic1" "pic2 pic2 pic2 pic2 pic2 pic2 pic2 pic3 pic3 pic3 pic3 pic3" "pic2 pic2 pic2 pic2 pic2 pic2 pic2 art2 art2 art2 art2 art2";
     max-width: 689px;
-    margin: 0 auto;
+    margin: 120px auto;
   }
   .gallery__announcement--1 {
     min-width: 223px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .gallery {
+    min-width: 1110px;
+    margin: 180px;
+    gap: 30px 28px;
+    grid-template-rows: 400px 313px 377px;
   }
 }
 .footer {

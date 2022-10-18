@@ -25,11 +25,11 @@
 @media screen and (min-width: 768px) {
   .hero {
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(10, 60px);
 
     &__img {
       grid-column: 1/8;
       grid-row: 1/11;
+      height: 700px;
     }
 
     &__CTA-section {
@@ -50,12 +50,13 @@
       position: relative;
       left: 450px;
       z-index: -1;
+      height: 800px;
 
       &::after {
         content: "";
         display: block;
         width: 450px;
-        height: 799px;
+        height: 800px;
         background-color: $main;
         position: absolute;
         top: 0;
